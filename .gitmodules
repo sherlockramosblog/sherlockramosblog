@@ -1,0 +1,3 @@
+[submodule "sherlockramos"]
+	path = sherlockramos
+	url = https://github.com/sherlockramos/sherlockramos.git
