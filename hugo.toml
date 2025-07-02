@@ -1,0 +1,93 @@
+baseURL = "https://sherlockramos.blog/"
+languageCode = "pt-BR"
+title = "SherlockRamos"
+theme = "PaperMod"
+
+[params]
+    defaultTheme = "auto" # dark, light
+    disableThemeToggle = false
+    ShowShareButtons = true
+    ShowReadingTime = true
+    ShowPostNavLinks = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    ShowWordCount = true
+    ShowRssButtonInSectionTermList = true
+    UseHugoToc = true
+    disableSpecial1stPost = true
+    comments = false # Desabilitado por padrão, pode ser habilitado depois
+    hidemeta = false
+    hideSummary = false
+    showtoc = false
+    tocopen = false
+
+    [params.assets]
+        disableHLJS = true # Desabilita o highlight.js padrão para usar o do Chroma do Hugo
+
+    [params.label]
+        text = "Home"
+        icon = "/apple-touch-icon.png"
+        iconHeight = 35
+
+    # Profile mode
+    [params.profileMode]
+        enabled = true
+        title = "SherlockRamos"
+        subtitle = "Um blog sobre Inteligência Artificial, Ferramentas de Estudo e outras Abobrinhas."
+        imageUrl = "" # Adicione o caminho para uma imagem de perfil aqui
+        imageWidth = 120
+        imageHeight = 120
+        imageTitle = "SherlockRamos"
+        buttons = [
+            { name = "Blog", url = "/posts" },
+            { name = "Sobre", url = "/sobre" }
+        ]
+
+    # Social Icons
+    [[params.socialIcons]]
+        name = "twitter"
+        url = "https://twitter.com/GatoMaconhado_"
+
+    [[params.socialIcons]]
+        name = "instagram"
+        url = "https://www.instagram.com/prof.gabrielramos/"
+
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/profgabrielramos-ai"
+
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "categorias"
+    name = "Categorias"
+    url = "/categories/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 30
+  [[menu.main]]
+    identifier = "contato"
+    name = "Contato"
+    url = "/contato/"
+    weight = 40
+
+# Habilitar saídas para busca
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+
+# Configurações do Markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    style = "dracula"
